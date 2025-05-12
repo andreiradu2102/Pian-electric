@@ -1,13 +1,17 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
 
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+const int BUZZ = 9;
+
+const int notes[] = {262, 294, 330, 349, 392, 440, 494, 523};
 
 void setup() {
-  lcd.init();
-  lcd.backlight();
-  lcd.print("Salut, lume!");
+  for (byte i = 0; i < 8; i++) {
+    tone(BUZZ, notes[i]);
+    delay(300);
+    noTone(BUZZ);
+    delay(50);
+  }
 }
 
 void loop() {
