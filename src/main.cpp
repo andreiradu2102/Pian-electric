@@ -1,17 +1,13 @@
 #include <Arduino.h>
 #include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 void setup() {
-  Wire.begin();
-  Serial.begin(9600);
-  for (byte a = 1; a < 127; a++) {
-    Wire.beginTransmission(a);
-    if (Wire.endTransmission() == 0) {
-      Serial.print("I2C device found at 0x");
-      Serial.println(a, HEX);
-      delay(5);
-    }
-  }
+  lcd.init();
+  lcd.backlight();
+  lcd.print("Salut, lume!");
 }
 
 void loop() {
