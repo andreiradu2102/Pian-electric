@@ -1,6 +1,1 @@
-<iframe width="560" height="315"
-        src="https://www.youtube.com/watch?v=p7ay5NSMkBY"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-</iframe>
+[![Pian electric](https://img.youtube.com/vi/p7ay5NSMkBY/0.jpg)](https://www.youtube.com/watch?v=p7ay5NSMkBY)
